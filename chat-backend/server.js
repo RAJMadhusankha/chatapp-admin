@@ -19,17 +19,17 @@ const io = new Server(httpServer, { cors: { origin: "*" } });
 
 // --- Global Middleware ---
 // This section is now corrected and simplified.
-const corsOptions = {
-  origin: [
-    "https://chatappadmin.netlify.app", // Production
-    "http://localhost:3000", // Local development
-  ], // Your Netlify frontend URL
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true,
-  optionsSuccessStatus: 204,
-};
+// const corsOptions = {
+//   origin: [
+//     "https://chatappadmin.netlify.app", // Production
+//     "http://localhost:3000", // Local development
+//   ], // Your Netlify frontend URL
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   credentials: true,
+//   optionsSuccessStatus: 204,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json()); // This is the crucial line that parses JSON bodies.
 

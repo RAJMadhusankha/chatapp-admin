@@ -29,7 +29,6 @@ const ProtectedRoute = ({ children }) => {
 function App() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Router>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
@@ -56,7 +55,6 @@ function App() {
             <Route path="activity-log" element={<ActivityLogPage />} />
           </Route>
         </Routes>
-      </Router>
     </LocalizationProvider>
   );
 }
